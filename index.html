@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>forEver Note</title>
+    <style media="screen">
+
+      ul {
+        display: inline-block;
+        list-style-type: none;
+      }
+
+
+    .grid-container {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "note_content note_body journal ." "addNoteForm . . ." ". . . .";
+    }
+    .note_content { grid-area: note_content; }
+    .addNoteForm { grid-area: addNoteForm; margin-left: 2rem;}
+    .note_body { grid-area: note_body; }
+    #journalSection { grid-area: journal; }
+    </style>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <div class="grid-container">
+    <h1>All of my notes</h1>
+    <div class="note_content">
+
+      <ul class="note_list">
+
+      </ul>
+
+    </div>
+
+    <div class="note_body">
+
+    </div>
+
+      <form class="addNoteForm">
+        <h1>Add a new note!</h1>
+        <input placeholder="Note Title" name="noteTitle" >
+        <input placeholder="Note content..." name="noteContent">
+        <input type="submit" class="submit" value="Add Note">
+      </form>
+    </div>
+    <script src="adapter.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+
+  </body>
+</html>
